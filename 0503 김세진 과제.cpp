@@ -80,11 +80,11 @@ int minimax(int board[9], int player) {
 	if (winner != 0) return winner * player;
 
 	int move = -1;
-	int score = -2;//Losing moves are preferred to no move
+	int score = -2;
 	int i;
-	for (i = 0; i < 9; ++i) {//For all moves,
-		if (board[i] == 0) {//If legal,
-			board[i] = player;//Try the move
+	for (i = 0; i < 9; ++i) {
+		if (board[i] == 0) {
+			board[i] = player;
 			int thisScore = -minimax(board, player * -1);
 			if (thisScore > score) {
 				score = thisScore;
