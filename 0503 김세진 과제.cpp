@@ -1,4 +1,4 @@
-﻿#include <Bangtal.h>
+#include <Bangtal.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h> 
@@ -160,24 +160,28 @@ void mouseCallback(ObjectID object, int x, int y, MouseAction  action) {
 		if (board[0] == 0) {
 			board[0] = -1;
 			setObjectImage(p[0], "1_o.png");
-		}
-		int move = -1;
-		int score = -2;
-		int i;
-		for (i = 0; i < 9; ++i) {
-			if (board[i] == 0) {
-				board[i] = 1;
-				int tempScore = -minimax(board, -1);
-				board[i] = 0;
-				if (tempScore > score) {
-					score = tempScore;
-					move = i;
+			int move = -1;
+			int score = -2;
+			int i;
+			for (i = 0; i < 9; ++i) {
+				if (board[i] == 0) {
+					board[i] = 1;
+					int tempScore = -minimax(board, -1);
+					board[i] = 0;
+					if (tempScore > score) {
+						score = tempScore;
+						move = i;
+					}
 				}
 			}
+			board[move] = 1;
+			checker();
+			reader();
 		}
-		board[move] = 1;
-		checker();
-		reader();
+		else {
+			showMessage("다시 시도하세요");
+		}
+		
 	}
 	else if (object == p[1]) {
 		checker();
@@ -185,24 +189,28 @@ void mouseCallback(ObjectID object, int x, int y, MouseAction  action) {
 		if (board[1] == 0) {
 			board[1] = -1;
 			setObjectImage(p[1], "2_o.png");
-		}
-		int move = -1;
-		int score = -2;
-		int i;
-		for (i = 0; i < 9; ++i) {
-			if (board[i] == 0) {
-				board[i] = 1;
-				int tempScore = -minimax(board, -1);
-				board[i] = 0;
-				if (tempScore > score) {
-					score = tempScore;
-					move = i;
+			int move = -1;
+			int score = -2;
+			int i;
+			for (i = 0; i < 9; ++i) {
+				if (board[i] == 0) {
+					board[i] = 1;
+					int tempScore = -minimax(board, -1);
+					board[i] = 0;
+					if (tempScore > score) {
+						score = tempScore;
+						move = i;
+					}
 				}
 			}
+			board[move] = 1;
+			checker();
+			reader();
 		}
-		board[move] = 1;
-		checker();
-		reader();
+		else {
+			showMessage("다시 시도하세요");
+		}
+		
 
 	}
 	else if (object == p[2]) {
@@ -211,24 +219,28 @@ void mouseCallback(ObjectID object, int x, int y, MouseAction  action) {
 		if (board[2] == 0) {
 			board[2] = -1;
 			setObjectImage(p[2], "3_o.png");
-		}
-		int move = -1;
-		int score = -2;
-		int i;
-		for (i = 0; i < 9; ++i) {
-			if (board[i] == 0) {
-				board[i] = 1;
-				int tempScore = -minimax(board, -1);
-				board[i] = 0;
-				if (tempScore > score) {
-					score = tempScore;
-					move = i;
+			int move = -1;
+			int score = -2;
+			int i;
+			for (i = 0; i < 9; ++i) {
+				if (board[i] == 0) {
+					board[i] = 1;
+					int tempScore = -minimax(board, -1);
+					board[i] = 0;
+					if (tempScore > score) {
+						score = tempScore;
+						move = i;
+					}
 				}
 			}
+			board[move] = 1;
+			checker();
+			reader();
 		}
-		board[move] = 1;
-		checker();
-		reader();
+		else {
+			showMessage("다시 시도하세요");
+		}
+		
 	}
 	else if (object == p[3]) {
 		checker();
@@ -236,24 +248,28 @@ void mouseCallback(ObjectID object, int x, int y, MouseAction  action) {
 		if (board[3] == 0) {
 			board[3] = -1;
 			setObjectImage(p[3], "4_o.png");
-		}
-		int move = -1;
-		int score = -2;
-		int i;
-		for (i = 0; i < 9; ++i) {
-			if (board[i] == 0) {
-				board[i] = 1;
-				int tempScore = -minimax(board, -1);
-				board[i] = 0;
-				if (tempScore > score) {
-					score = tempScore;
-					move = i;
+			int move = -1;
+			int score = -2;
+			int i;
+			for (i = 0; i < 9; ++i) {
+				if (board[i] == 0) {
+					board[i] = 1;
+					int tempScore = -minimax(board, -1);
+					board[i] = 0;
+					if (tempScore > score) {
+						score = tempScore;
+						move = i;
+					}
 				}
 			}
+			board[move] = 1;
+			checker();
+			reader();
 		}
-		board[move] = 1;
-		checker();
-		reader();
+		else {
+			showMessage("다시 시도하세요");
+		}
+		
 	}
 	else if (object == p[4]) {
 		checker();
@@ -261,24 +277,28 @@ void mouseCallback(ObjectID object, int x, int y, MouseAction  action) {
 		if (board[4] == 0) {
 			board[4] = -1;
 			setObjectImage(p[4], "5_o.png");
-		}
-		int move = -1;
-		int score = -2;
-		int i;
-		for (i = 0; i < 9; ++i) {
-			if (board[i] == 0) {
-				board[i] = 1;
-				int tempScore = -minimax(board, -1);
-				board[i] = 0;
-				if (tempScore > score) {
-					score = tempScore;
-					move = i;
+			int move = -1;
+			int score = -2;
+			int i;
+			for (i = 0; i < 9; ++i) {
+				if (board[i] == 0) {
+					board[i] = 1;
+					int tempScore = -minimax(board, -1);
+					board[i] = 0;
+					if (tempScore > score) {
+						score = tempScore;
+						move = i;
+					}
 				}
 			}
+			board[move] = 1;
+			checker();
+			reader();
 		}
-		board[move] = 1;
-		checker();
-		reader();
+		else {
+			showMessage("다시 시도하세요");
+		}
+		
 	}
 	else if (object == p[5]) {
 		checker();
@@ -286,24 +306,28 @@ void mouseCallback(ObjectID object, int x, int y, MouseAction  action) {
 		if (board[5] == 0) {
 			board[5] = -1;
 			setObjectImage(p[5], "6_o.png");
-		}
-		int move = -1;
-		int score = -2;
-		int i;
-		for (i = 0; i < 9; ++i) {
-			if (board[i] == 0) {
-				board[i] = 1;
-				int tempScore = -minimax(board, -1);
-				board[i] = 0;
-				if (tempScore > score) {
-					score = tempScore;
-					move = i;
+			int move = -1;
+			int score = -2;
+			int i;
+			for (i = 0; i < 9; ++i) {
+				if (board[i] == 0) {
+					board[i] = 1;
+					int tempScore = -minimax(board, -1);
+					board[i] = 0;
+					if (tempScore > score) {
+						score = tempScore;
+						move = i;
+					}
 				}
 			}
+			board[move] = 1;
+			checker();
+			reader();
 		}
-		board[move] = 1;
-		checker();
-		reader();
+		else {
+			showMessage("다시 시도하세요");
+		}
+		
 	}
 	else if (object == p[6]) {
 		checker();
@@ -311,24 +335,28 @@ void mouseCallback(ObjectID object, int x, int y, MouseAction  action) {
 		if (board[6] == 0) {
 			board[6] = -1;
 			setObjectImage(p[6], "7_o.png");
-		}
-		int move = -1;
-		int score = -2;
-		int i;
-		for (i = 0; i < 9; ++i) {
-			if (board[i] == 0) {
-				board[i] = 1;
-				int tempScore = -minimax(board, -1);
-				board[i] = 0;
-				if (tempScore > score) {
-					score = tempScore;
-					move = i;
+			int move = -1;
+			int score = -2;
+			int i;
+			for (i = 0; i < 9; ++i) {
+				if (board[i] == 0) {
+					board[i] = 1;
+					int tempScore = -minimax(board, -1);
+					board[i] = 0;
+					if (tempScore > score) {
+						score = tempScore;
+						move = i;
+					}
 				}
 			}
+			board[move] = 1;
+			checker();
+			reader();
 		}
-		board[move] = 1;
-		checker();
-		reader();
+		else {
+			showMessage("다시 시도하세요");
+		}
+		
 	}
 	else if (object == p[7]) {
 		checker();
@@ -336,24 +364,28 @@ void mouseCallback(ObjectID object, int x, int y, MouseAction  action) {
 		if (board[7] == 0) {
 			board[7] = -1;
 			setObjectImage(p[7], "8_o.png");
-		}
-		int move = -1;
-		int score = -2;
-		int i;
-		for (i = 0; i < 9; ++i) {
-			if (board[i] == 0) {
-				board[i] = 1;
-				int tempScore = -minimax(board, -1);
-				board[i] = 0;
-				if (tempScore > score) {
-					score = tempScore;
-					move = i;
+			int move = -1;
+			int score = -2;
+			int i;
+			for (i = 0; i < 9; ++i) {
+				if (board[i] == 0) {
+					board[i] = 1;
+					int tempScore = -minimax(board, -1);
+					board[i] = 0;
+					if (tempScore > score) {
+						score = tempScore;
+						move = i;
+					}
 				}
 			}
+			board[move] = 1;
+			checker();
+			reader();
 		}
-		board[move] = 1;
-		checker();
-		reader();
+		else {
+			showMessage("다시 시도하세요");
+		}
+		
 	}
 	else if (object == p[8]) {
 		checker();
@@ -361,24 +393,28 @@ void mouseCallback(ObjectID object, int x, int y, MouseAction  action) {
 		if (board[8] == 0) {
 			board[8] = -1;
 			setObjectImage(p[8], "9_o.png");
-		}
-		int move = -1;
-		int score = -2;
-		int i;
-		for (i = 0; i < 9; ++i) {
-			if (board[i] == 0) {
-				board[i] = 1;
-				int tempScore = -minimax(board, -1);
-				board[i] = 0;
-				if (tempScore > score) {
-					score = tempScore;
-					move = i;
+			int move = -1;
+			int score = -2;
+			int i;
+			for (i = 0; i < 9; ++i) {
+				if (board[i] == 0) {
+					board[i] = 1;
+					int tempScore = -minimax(board, -1);
+					board[i] = 0;
+					if (tempScore > score) {
+						score = tempScore;
+						move = i;
+					}
 				}
 			}
+			board[move] = 1;
+			checker();
+			reader();
 		}
-		board[move] = 1;
-		checker();
-		reader();
+		else {
+			showMessage("다시 시도하세요");
+		}
+		
 	}
 }
 
